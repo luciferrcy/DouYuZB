@@ -64,7 +64,7 @@ extension RecommendViewModel {
         }
         //3.请求2.12部分游戏数据
         dispatch_group.enter()
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: ["limit":"4","offset":"0","time":NSDate.getCurrentTime()]) {
+        loadAnchorData(isGroup: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: ["limit":"4","offset":"0","time":NSDate.getCurrentTime()]) {
             dispatch_group.leave()
         }
         

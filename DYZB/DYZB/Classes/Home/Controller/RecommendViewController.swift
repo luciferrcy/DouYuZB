@@ -56,6 +56,7 @@ extension RecommendViewController {
             moreGroup.tag_name = "更多"
             groups.append(moreGroup)
             self.gameView.groups = groups
+            self.loadDataFinished()
         }
         
         recommendVm.requestCycleData {

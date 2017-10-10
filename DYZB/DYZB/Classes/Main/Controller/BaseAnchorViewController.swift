@@ -18,7 +18,7 @@ let normalCellID = "normalCellID"
 let prettyCellID = "prettyCellID"
 let headerViewID = "headerViewID"
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     // MARK:- 定义属性
     var baseVM : BaseViewModel!
@@ -55,8 +55,10 @@ class BaseAnchorViewController: UIViewController {
 
 // MARK:- 设置UI
 extension BaseAnchorViewController {
-    func setupUI(){
+    override func setupUI(){
+        contentView = collectionView
         view.addSubview(collectionView)
+        super.setupUI()
     }
 }
 
